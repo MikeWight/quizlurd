@@ -1,5 +1,6 @@
 import { LanguagechosenService } from './../languagechosen.service';
 import { Component, OnInit } from '@angular/core';
+import {Subscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-quizstation',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quizstation.component.css']
 })
 export class QuizstationComponent implements OnInit {
-
+  sub: Subscription;  
+  
   typeChosen: String;
 
   constructor(private lcs: LanguagechosenService) { }
@@ -21,6 +23,17 @@ export class QuizstationComponent implements OnInit {
     this.lcs.changeType('light');
   }
     this.typeChosen = this.lcs.typeChosen;
+    this.sub = this.lcs.typeChange.subscribe(
+      (newType: String) => {
+        console.log(newType);
+        this.typeChosen = newType;
+      }
+    );
   }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  }
+
 
 }

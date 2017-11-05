@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   }
 
   goToLanguage(language: string){
-    console.log("Got here!!!!");
       this.lcs.changeLanguage(language);
       this.router.navigateByUrl('/quiztypes');
   }

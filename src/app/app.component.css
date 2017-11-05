@@ -1,7 +1,0 @@
-.hover-border:hover {
-    border-color: blue;
-    cursor: pointer;
-}
-.hover-border:active {
-    background-color: lightblue;
-}

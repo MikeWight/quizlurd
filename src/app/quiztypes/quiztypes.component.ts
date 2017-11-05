@@ -1,13 +1,13 @@
 import { Router } from '@angular/router';
 import { LanguagechosenService } from './../languagechosen.service';
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-quiztypes',
   templateUrl: './quiztypes.component.html',
   styleUrls: ['./quiztypes.component.css']
 })
 export class QuiztypesComponent implements OnInit {
+  
 
   languageChosen: String;
 
@@ -31,8 +31,6 @@ export class QuiztypesComponent implements OnInit {
   }
   
   startGame(typeChosen: String){
-    console.log("HEY");
-    console.log(typeChosen);
     this.LanguagechosenService.changeType(typeChosen);
     this.router.navigateByUrl('/quiztypes/quizstation');
   }
