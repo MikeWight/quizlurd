@@ -1,0 +1,20 @@
+<div class="w-100 float-left">
+<div (click)="clear()" class="float-left col-6 col-sm-4 col-md-4 col-xl-3">
+    <img src="assets/{{languageChosen}}.png" class="w-100 hover-border img-fluid img-thumbnail" alt="Responsive image">
+</div>
+<div class="w-100 col-12 float-left mb-4"></div>
+
+<div (click)="startGame('light')" class="mb-3 float-left col-4 col-sm-3 col-md-3 col-xl-2">
+    <img src="assets/light.png" class="w-100 hover-border img-fluid img-thumbnail" alt="Responsive image">
+</div>
+<div (click)="startGame('lightning')" class="mb-3 float-left col-4 col-sm-3 col-md-3 col-xl-2">
+    <img src="assets/lightning.png" class="w-100 hover-border img-fluid img-thumbnail" alt="Responsive image">
+</div>
+<div (click)="startGame('fire')" class="mb-3 float-left col-4 col-sm-3 col-md-3 col-xl-2">
+    <img src="assets/fire.png" class="w-100 hover-border img-fluid img-thumbnail" alt="Responsive image">
+</div>
+<div (click)="startGame('interview')" class="mb-3 float-left col-4 col-sm-3 col-md-3 col-xl-2">
+    <img src="assets/interview.png" class="w-100 hover-border img-fluid img-thumbnail" alt="Responsive image">
+</div>
+</div>
+<router-outlet></router-outlet>
